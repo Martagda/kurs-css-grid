@@ -35,7 +35,19 @@
      .container {
        display: grid;
        
-       grid-template-columns: repeat(5, 1fr);
+       grid-template-columns: repeat(8, 1fr);
+     }
+     
+     .item:nth-child(3n) {
+       grid-column: span 4;
+     }
+     
+     .item:nth-child(5n) {
+       grid-row: span 2;
+     }
+     
+     .item20 {
+       grid-column: span 5;
      }
    </style>
 </body>
