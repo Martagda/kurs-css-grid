@@ -25,9 +25,21 @@
      .container {
        display: grid;
        background: var(--blue);
+       height: 800px;
        
        grid-template-columns: repeat(auto-fit, 250px);
        grid-template-rows: repeat(3, 200px);
+       
+       justify-content: space-between;
+       align-content: end;
+       
+       justify-items: center;
+       align-items: start;
+     }
+     
+     .item7 {
+       align-self: stretch;
+       justify-self: stretch;
      }
    </style>
 </body>
