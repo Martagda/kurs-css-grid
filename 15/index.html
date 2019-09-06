@@ -34,12 +34,23 @@
     <div class="item item10">10</div>
   </div>
    <style>
-     .container {
-       display: grid;      
+     .grid {
+       display: grid;
+       
+       grid-auto-flow: column;
+       grid-template-columns: repeat(10, min-content);
+       justify-content: end;
+       direction: rtl;
+     }
+     
+     .grid > * {
+       direction: ltr;
      }
      
      .flex {
        display: flex;
+       flex-direction: row-reverse;
+       justify-content: flex-end;
      }
    </style>
 </body>
