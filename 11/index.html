@@ -35,7 +35,23 @@
      .container {
        display: grid;
        
-       grid-template-columns: repeat(5, 1fr);
+       grid-template-columns: [site-start] 100px [content-start] 300px [content-end] 50px 50px [site-end];
+       
+       grid-template-rows: [explicit-site-start] 100px [content-start] 150px [content-end] 300px [expclit-site-end];
+     }
+     
+     .item3 {
+       grid-column: content-start / content-end;
+       grid-row: content-start / content-end;
+       background: var(--blue);
+     }
+     
+     .item4 {
+       grid-area: sidebar;
+     }
+     
+     .item15 {
+       grid-column: span 6;
      }
    </style>
 </body>
