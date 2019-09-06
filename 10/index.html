@@ -16,7 +16,7 @@
      <div class="item item4">4</div>
      <div class="item item5">5</div>
      <div class="item item6">6</div>
-     <div class="item item7">7</div>
+     <div class="item item7">Notification</div>
      <div class="item item8">8</div>
      <div class="item item9">9</div>
      <div class="item item10">10</div>
@@ -42,6 +42,32 @@
         "footer footer footer";
         
        grid-auto-rows: 80px;
+     }
+
+     .item1 {
+       grid-area: content;
+     }
+     
+     .item2 {
+       grid-area: footer;
+     }
+     
+     .item3 {
+       grid-area: sidebar;
+       background: red;
+       color: white;
+     }
+     
+     .item4 {
+       grid-area: header;
+     }
+     
+     .item7 {
+       background: black;
+       color: white;
+       opacity: 0.7;
+       grid-column: content-start / sidebar-end;
+       grid-row: content-start;
      }
    </style>
 </body>
