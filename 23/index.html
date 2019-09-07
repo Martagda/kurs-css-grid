@@ -36,8 +36,25 @@
      <div class="item item24">24</div>
      <div class="item item25">25</div>
      <div class="item item26">26</div>
-     <div class="item item27">27</div>
-     <div class="item item28">28</div>
+     <div class="item item27 container" style="--span: 8; --columns: 8">
+        27
+      <div class="nested">1</div>
+      <div class="nested">2</div>
+      <div class="nested">3</div>
+      <div class="nested">4</div>
+      <div class="nested">5</div>
+      <div class="nested">1</div>
+      <div class="nested">2</div>
+      <div class="nested">3</div>
+      <div class="nested">4</div>
+      <div class="nested">5</div>
+      <div class="nested">1</div>
+      <div class="nested">2</div>
+      <div class="nested">3</div>
+      <div class="nested">4</div>
+      <div class="nested">5</div>
+     </div>
+     <div class="item item28" style="--span: 2">28</div>
      <div class="item item29">29</div>
      <div class="item item30">30</div>
      <div class="item item31">31</div>
@@ -47,10 +64,29 @@
      <div class="item item35">35</div>
    </div>
    <style>
+     :root {
+       --span: 1;
+       --columns: 12;
+     }
+     
      .container {
        display: grid;
        
-       grid-template-columns: repeat(5, 1fr);
+       grid-template-columns: repeat(var(--columns, 12), minmax(10px,1fr));
+       grid-gap: 20px;
+     }
+     
+     .item {
+       grid-column: span var(--span);
+     }
+     
+     .item27 {
+       display: grid;
+     }
+     
+    .nested {
+       font-size: 2rem;
+       background: var(--blue);
      }
    </style>
 </body>
