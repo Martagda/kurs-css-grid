@@ -23,6 +23,7 @@ body {
   font-weight: bold;
   font-size: 3em;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .item:nth-child(2n) {
@@ -42,6 +43,9 @@ body {
   background: var(--yellow);
   color: black;
   text-align: center;
+}
+.item:focus {
+  border: 5px solid var(--blue);
 }
 
 .content {
