@@ -32,15 +32,35 @@
    <style>
      .grid {
        display: grid;
+       
+       grid-template-columns: repeat(3, 1fr);
+       
+       grid-gap: 20px;
+       
+       justify-items: center;
+       justify-content: space-around;
+     }
+     
+     .grid .item5 {
+       justify-self: stretch;
+       order: 1;
      }
      
      .flex {
        display: flex;
+       
+       flex-wrap: wrap;
+       justify-content: space-around;
      }
      
      .flex .item {
        width: 25%;
        margin: 10px;
+       order: 1;
+     }
+     
+     .flex .item5 {
+       justify-self: center;
      }
    </style>
 </body>
