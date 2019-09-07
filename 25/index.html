@@ -44,7 +44,7 @@
         </a>
      </li>
    </ul>
-   <!-- <ul class="albums">
+   <ul class="albums">
       <li>
         <figure>
           <img src="https://source.unsplash.com/random/200x200?v1" alt="">
@@ -108,9 +108,60 @@
            <figcaption> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nobis fugit dolorem recusandae saepe quidem voluptatibus quaerat, incidunt, enim praesentium ad, vitae modi sunt debitis tempora vel pariatur dolores quos? </figcaption>
          </figure>
        </li>
-     </ul> -->
+     </ul>
    <style>
+     body {
+       display: grid;
+       grid-gap: 20px;
+     }
      
+     .banner {
+       display: grid;
+       grid-template-areas: 
+         "img img cta1"
+         "img img cta2";
+
+       grid-gap: 20px;
+     }
+     
+     .banner img {
+       grid-area: img;
+       width: 100%;
+       object-fit: cover;
+     }
+     
+     .banner__button {
+       grid-area: cta1;
+       width: 100%;
+       min-height: 100px;
+     }
+     
+     .banner__button:last-child {
+       grid-area: cta2;
+     }
+     
+     .navigation {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(0, 300px));
+       justify-content: center;
+       grid-auto-rows: 100px;
+       grid-gap: 20px;
+     }
+     
+     .header {
+       display: grid;
+       grid-template-columns: auto auto;
+       justify-content: space-between;
+     }
+     
+     @media only screen and (max-width: 715px) {
+       .banner {
+         grid-template-areas: 
+            "img img img"
+            "cta1 cta1 cta1"
+            "cta2 cta2 cta2";
+       }
+     }
    </style>
 </body>
 </html>
